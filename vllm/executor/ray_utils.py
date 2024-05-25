@@ -42,6 +42,9 @@ try:
             output = pickle.dumps(output)
             return output
 
+        def update_logit_processor(self, processor):
+            self.worker.model_runner.model.sampler.processor = processor
+
 except ImportError as e:
     logger.warning(
         "Failed to import Ray with %r. For multi-node inference, "

@@ -11,6 +11,9 @@ from vllm.outputs import (CompletionOutput, EmbeddingOutput,
 from vllm.pooling_params import PoolingParams
 from vllm.sampling_params import SamplingParams
 
+from vllm.model_executor.layers.sampler import LogitProcessor, DefaultLogitProcessor
+from vllm.model_executor.sampling_metadata import SamplingMetadata
+
 __version__ = "0.4.2"
 
 __all__ = [
@@ -27,4 +30,7 @@ __all__ = [
     "AsyncEngineArgs",
     "initialize_ray_cluster",
     "PoolingParams",
+    "LogitProcessor",
+    "DefaultLogitProcessor",
+    "SamplingMetadata"
 ]
